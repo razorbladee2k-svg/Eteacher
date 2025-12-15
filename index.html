@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>eTeacher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <h1>eTeacher</h1>
+  <p>Learn from mistakes. Improve English. Fix your accent.</p>
+</header>
+
+<nav>
+  <button onclick="showSection('grammar')">Grammar</button>
+  <button onclick="showSection('accent')">Accent</button>
+  <button onclick="showSection('practice')">Practice</button>
+</nav>
+
+<section id="grammar" class="content">
+  <h2>Common Grammar Mistakes</h2>
+
+  <p>❌ He go to school</p>
+  <p>✅ He goes to school</p>
+
+  <p>❌ She don’t like coffee</p>
+  <p>✅ She doesn’t like coffee</p>
+</section>
+
+<section id="accent" class="content hidden">
+  <h2>Accent Practice</h2>
+
+  <p><strong>TH sound:</strong> think / this</p>
+  <audio controls>
+    <source src="think.mp3" type="audio/mpeg">
+  </audio>
+
+  <p><strong>R vs L:</strong> rice / lice</p>
+</section>
+
+<section id="practice" class="content hidden">
+  <h2>Practice Quiz</h2>
+
+  <p>Choose the correct sentence:</p>
+
+  <button onclick="checkAnswer(true)">He goes to school</button>
+  <button onclick="checkAnswer(false)">He go to school</button>
+
+  <p id="result"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
